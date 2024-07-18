@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Line Graph with Filters</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: semi-bold;
+            /*color: white*/
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #00333a;
+            
+                }
+        .chart {
+            margin: 20px;
+            background-color: white;
+        }
+        select {
+            margin: 10px;
+            font-size: 18px;
+            font-weight: regular;
+
+        }
+        .x-axis text,
+        .y-axis text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+
+        }
+        .title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px; /* Adjust this value for the title font size */
+            font-weight: semi-bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+   
+    
+</head>
+<body>
+    <div class="chart-container">
+        <div class="title">Monthly UCR Part One Crimes by Agency & Year</div>
+
+    <div>
+        <label style="color: white" for="crime-filter">Show me</label>
+        <select id="crime-filter"></select>
+        <label style="color: white" for="agency-filter">for</label>
+        <select id="agency-filter"></select>
+        <label style="color: white" for="year-filter">from</label>
+        <select id="year-filter">
+            <option value="all">All Years</option>
+        </select>
+    </div>
+    <div class="chart">
+        <svg width="800" height="600"></svg>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
